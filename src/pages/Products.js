@@ -12,22 +12,24 @@ const Products = () => {
   let showData = inventoryData;
 
   if (filterData.category) {
-    showData = data.filter((item) => item.department === filterData.category);
+    showData = showData.filter(
+      (item) => item.department === filterData.category
+    );
   }
   if (filterData.lowStockOnly) {
-    showData = data.filter((item) => item.stock < 10);
+    showData = showData.filter((item) => item.stock < 10);
   }
   if (filterData.sort) {
     if (data.every((item) => typeof item[filterData.sort] === "string")) {
-      showData = data.sort((a, b) =>
+      showData = showData.sort((a, b) =>
         a[filterData.sort].localeCompare(b[filterData.sort])
       );
     } else {
-      showData = data.sort((a, b) => a[filterData.sort] - b[filterData.sort]);
+      showData = showData.sort(
+        (a, b) => a[filterData.sort] - b[filterData.sort]
+      );
     }
   }
-
-  console.log(filterData, data);
 
   return (
     <div className="products-page">
