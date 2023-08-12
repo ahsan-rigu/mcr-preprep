@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <Link to="/" className="logo">
-        MCR 8 | Ahsan
+        MCR 10 | Ahsan
       </Link>
       <nav></nav>
       <label class="switch">

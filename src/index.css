@@ -40,10 +40,35 @@ body{
   text-align: center;
 }
 
+.card{
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.thumbnail{
+  object-fit: contain;
+  width: 10rem;
+  height: 10rem;
+}
+ tr, td, th{
+  border: 1px solid rgba(128, 128, 128, 0.459);
+  padding: .5rem 1rem;
+}
+
+
+th{
+  background-color: rgb(187, 187, 187);
+}
+
+
+
 
 *{
   box-sizing: border-box;
-  transition: .6s all;
 }
 
 img{
@@ -81,4 +106,33 @@ a{
   text-decoration: none;
 }
 
+.products-page{
+  display: inline-block;
+  margin-top: 2rem;
+  width: calc(100vw - 30rem);
+  overflow: scroll;
+  padding-inline: 1rem;
+}
 
+div.filter{
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+
+@media screen and (max-width: 1024px){
+
+.products-page{
+  width: 100vw !important;
+  overflow: scroll;
+  padding-inline: 1rem;
+}
+.products-page table{
+  max-width: 90vw;
+  overflow: scroll;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+}
